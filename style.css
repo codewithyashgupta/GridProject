@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: #ededed;
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: 26% 56% 18%;
+}
+
+.top-left {
+  padding: 30px;
+}
+#square {
+  height: 20px;
+  width: 20px;
+  rotate: 45deg;
+  background-color: black;
+}
+
+.top-right {
+  justify-self: right;
+  padding: 40px;
+  text-align: right;
+}
+.top-right h4 {
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 500px;
+}
+.top-right h5 {
+  font-size: 18px;
+  font-weight: 500px;
+  color: #333;
+}
+.top-right h6 {
+    display: none;
+}
+
+.center-left {
+  grid-column: 1/3;
+  padding: 40px;
+}
+.center-left h1 {
+  font-size: 5.5vw;
+  text-transform: uppercase;
+  line-height: 6vw;
+  font-weight: 500;
+  font-family: Helvetica;
+}
+.center-left h1:nth-child(2n) {
+  text-align: center;
+}
+.bottom-left {
+  grid-column: 1/3;
+  padding: 40px;
+}
+.bottom-left p {
+  width: 70%;
+  font-size: 20px;
+  font-weight: 500px;
+  color: #666;
+}
+.right {
+  grid-column: 3;
+  grid-row: 1/4;
+  padding: 40px;
+}
+
+.right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.arrow {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  padding: 30px;
+  left: 52%;
+  top: 50%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.arrow i {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+@media (max-width: 600px) {
+  #main {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60px 34% 6%;
+  }
+
+  .top-left {
+    padding: 20px;
+  }
+  #square {
+    height: 15px;
+    width: 15px;
+  }
+
+  .top-right {
+    /* justify-self: right; */
+    padding: 20px;
+    text-align: right;
+  }
+  .top-right h4 {
+    display: none;
+  }
+  .top-right h5 {
+    display: none;
+  }
+  .top-right h6 {
+    display: initial;
+    font-size: 20px;
+}
+  .center-left {
+    padding: 10px 20px;
+  }
+  .center-left h1 {
+    font-size: 17vw;
+    line-height: 14vw;
+  }
+  .center-left h1:nth-child(2n) {
+    text-align: right;
+  }
+  .bottom-left {
+    padding: 5px 20px;
+  }
+  .bottom-left p {
+    width: 90%;
+    font-size: 10px;
+  }
+  .right {
+    grid-column: 1/4;
+    grid-row: 4;
+    padding: 20px;
+  }
+  .arrow {
+    transform: translate(-50%, -50%) rotate(90deg);
+    padding: 10px;
+    left: 50%;
+    top: 50%;
+}
+  .arrow i {
+    font-size: 20px;
+  }
+}
